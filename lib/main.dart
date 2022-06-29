@@ -6,7 +6,7 @@ import 'Newpages3.dart';
 import 'Newpages4.dart';
 import 'Newpages5.dart';
 import 'Newpages6.dart';
-import 'SearchPage.dart';
+import 'Notification.dart';
 
 void main() {
   runApp(const MyApp());
@@ -59,13 +59,25 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Pet Shop'), actions: [
-          // Navigate to the Search Screen
-          IconButton(
-              onPressed: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (_) => SearchPage())),
-              icon: Icon(Icons.search))
-        ]),
+         actions: [
+            IconButton(
+                icon: Icon(
+                  Icons.notifications_active,
+                  color: Colors.white,
+                ),
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return Notifikasi();
+                  }));
+                }),
+            IconButton(
+                icon: Icon(
+                  Icons.favorite,
+                  color: Colors.white,
+                ),
+                onPressed: () {})
+          ],
+    ),
         backgroundColor: Colors.cyanAccent[700],
         body: ListView(
           children: [

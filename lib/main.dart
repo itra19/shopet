@@ -59,7 +59,9 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-         actions: [
+        appBar: AppBar(
+          title: Text('Pet Shop'),
+          actions: [
             IconButton(
                 icon: Icon(
                   Icons.notifications_active,
@@ -77,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 onPressed: () {})
           ],
-    ),
+        ),
         backgroundColor: Colors.cyanAccent[700],
         body: ListView(
           children: [
